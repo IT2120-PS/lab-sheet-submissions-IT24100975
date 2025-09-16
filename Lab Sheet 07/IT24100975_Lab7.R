@@ -1,26 +1,15 @@
-# Exercise 
-#1
-a <- 10
-b <- 25
-range <- 40
+# Q1 Uniform
+p1 <- punif(25, min=0, max=40) - punif(10, min=0, max=40)
+print(p1)
 
-prob_train <- (b - a) / range
-prob_train
+# Q2 Exponential
+p2 <- pexp(2, rate = 1/3)
+print(p2)
 
-#2
-lambda <- 1/3
-x <- 2
+# Q3 Normal
+p3_i <- 1 - pnorm(130, mean = 100, sd = 15)
+print(p3_i)
 
-prob_update <- 1 - exp(-lambda * x)
-prob_update
+q3_95 <- qnorm(0.95, mean = 100, sd = 15)
+print(q3_95)
 
-#3(i)
-mean_iq <- 100
-sd_iq <- 15
-
-prob_above_130 <- 1 - pnorm(130, mean = mean_iq, sd = sd_iq)
-prob_above_130
-
-#3(ii)
-iq_95th <- qnorm(0.95, mean = mean_iq, sd = sd_iq)
-iq_95th
